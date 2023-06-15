@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 25px;
+        }
+        .btn {
+            margin-right: 15px;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+    </style>
 </head>
 <body>
-    <form method="POST">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=20) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=20) }}
-        </p>
-        <p>{{ form.login() }} {{ form.register() }}</p>
-    </form>
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="height:90vh">
+            <div class="col-4">
+                <h1 class="text-center">用户登录</h1>
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        {{ form.username(class="form-control", id="username") }}
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        {{ form.password(class="form-control", id="password") }}
+                    </div>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary" name="login" value="Login">登录</button>
+                        <button type="submit" class="btn btn-secondary" name="register" value="Register">注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
