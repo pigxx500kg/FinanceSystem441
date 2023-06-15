@@ -1,7 +1,7 @@
 # FinanceSystem441 - an excellent finance system
 前置准备：  
   &emsp;&emsp;数据库准备： MySQL5.7.19   &emsp;MySQL8.0会报错  
-      &emsp;&emsp;&emsp;&emsp;localhost: username  
+      &emsp;&emsp;&emsp;&emsp;username: root  
       &emsp;&emsp;&emsp;&emsp;password: 123456  
       &emsp;&emsp;&emsp;&emsp;需要执行：create database finance_news  
   &emsp;&emsp;文件目录：  
