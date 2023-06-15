@@ -31,12 +31,17 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     password = db.Column(db.String(128))
 
+# 创建一个应用上下文并创建所有的数据库表
+with app.app_context():
+    db.create_all()
+
 # 定义登陆表单
 class LoginForm(FlaskForm):
-    username = StringField('Username', validators=[DataRequired()])
-    password = PasswordField('Password', validators=[DataRequired()])
-    login = SubmitField('Login')
-    register = SubmitField('Register')
+    username = StringField('用户名', validators=[DataRequired()])
+    password = PasswordField('密码', validators=[DataRequired()])
+    login = SubmitField('登录')
+    register = SubmitField('注册')
+
 
 # 定义用户加载函数
 @login_manager.user_loader
@@ -115,7 +120,7 @@ def scrape_fund_shares():
     }
     global fundSharesList
     # ...爬虫代码...
-    # 请将所有需要打印的信息都换成日志（logging）
+
     funds = []
     fundNum = 0
     errorNum = 0
@@ -192,7 +197,6 @@ def scrape_fund_shares():
         db.rollback()
         raise Exception("插入数据库错误！", e)
 
-    # 对于每一个插入到数据库的循环，换成以下代码:
     # try:
 
     df = pd.DataFrame(fundSharesList, columns=['id', 'name', 'amount'])
