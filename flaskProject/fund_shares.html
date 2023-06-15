@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>基金持仓信息</title>
+    <style>
+        /* ...你的CSS... */
+    </style>
+</head>
+<body>
+    <h1>基金持仓信息</h1>
+    <table>
+        <tr>
+            <th>股票代码</th>
+            <th>股票名称</th>
+            <th>金额（万元）</th>
+        </tr>
+        {% for record in data %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.name }}</td>
+            <td>{{ record.amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
