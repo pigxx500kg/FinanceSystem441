@@ -3,6 +3,7 @@
 
 import re
 import time
+import random
 import pandas as pd
 
 import pymysql
@@ -62,7 +63,7 @@ def scrape_fund_shares():
         fund = fund.split(",")
         funds.append(fund)
 
-    while fundNum < 20:
+    while fundNum < random.randint(10, 30):
         fund_id = funds[fundNum][0]
 
         try:

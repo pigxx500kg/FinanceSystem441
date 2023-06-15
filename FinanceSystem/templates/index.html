@@ -39,6 +39,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 20px; /* 添加底部垂直间距 */
+            justify-content: space-between; /* 对称排列 */
         }
 
         .right-column {
@@ -46,8 +48,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 20px; /* 添加底部垂直间距 */
+            justify-content: space-between; /* 对称排列 */
         }
-
 
         input[type="text"],
         button[type="submit"] {
@@ -89,6 +92,7 @@
             cursor: pointer;
         }
     </style>
+
 </head>
 <body>
     <header>
@@ -111,15 +115,21 @@
                 <button type="submit">获取资讯</button>
             </form>
         </div>
-        <div class="right-column">
-            <h2 class="feature-title">东方财富</h2>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <h2 class="feature-title">东方财富-基金持仓</h2>
             <form action="/scrape_fund_shares" method="post">
                 <button type="submit">获取基金持仓信息</button>
             </form>
-
         </div>
-
+        <div class="right-column">
+            <h2 class="feature-title">股票K线图生成</h2>
+            <form action="/generate_k_plot" method="post">
+                <input type="text" name="stock_info" placeholder="输入股票代码或名称">
+                <button type="submit">查询</button>
+            </form>
+        </div>
     </div>
-
 </body>
 </html>
