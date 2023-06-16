@@ -5,22 +5,23 @@
       &emsp;&emsp;&emsp;&emsp;password: 123456  
       &emsp;&emsp;&emsp;&emsp;需要执行：create database finance_news  
   &emsp;&emsp;文件目录：  
-      &emsp;&emsp;root:[FinanceSystem]  
-      &emsp;&emsp;+--app.py  
-      &emsp;&emsp;+--clsnews.py  
-      &emsp;&emsp;+--finnews.py  
-      &emsp;&emsp;+--fundshares.py  
-      &emsp;&emsp;+--kplot.py  
-      &emsp;&emsp;+--login.py  
-      &emsp;&emsp;+--static  
-      &emsp;&emsp; |  +--images  \[需要新建二级目录 root\static\images用于存放k线图]  
-      &emsp;&emsp;+--templates  
-      &emsp;&emsp; |  +--cls_result.html  
-      &emsp;&emsp; |  +--fund_shares.html  
-      &emsp;&emsp; |  +--index.html  
-      &emsp;&emsp; |  +--kplot.html  
-      &emsp;&emsp; |  +--login.html  
-      &emsp;&emsp; |  +--result.html  
+&emsp;&emsp;&emsp;&emsp;root:[FinanceSystem]  
+&emsp;&emsp;&emsp;&emsp;+--app.py  
+&emsp;&emsp;&emsp;&emsp;+--cls_realtime_news.py  
+&emsp;&emsp;&emsp;&emsp;+--east_fin_fund_shares.py  
+&emsp;&emsp;&emsp;&emsp;+--east_fin_news.py  
+&emsp;&emsp;&emsp;&emsp;+--east_fin_stock_kplot.py  
+&emsp;&emsp;&emsp;&emsp;+--login_register.py  
+&emsp;&emsp;&emsp;&emsp;+--static  
+&emsp;&emsp;&emsp;&emsp;| +--images  
+&emsp;&emsp;&emsp;&emsp;+--templates  
+&emsp;&emsp;&emsp;&emsp;| +--cls_realtime_news_result.html  
+&emsp;&emsp;&emsp;&emsp;| +--east_fin_fund_shares_result.html  
+&emsp;&emsp;&emsp;&emsp;| +--east_fin_kplot_result.html  
+&emsp;&emsp;&emsp;&emsp;| +--east_fin_news_result.html  
+&emsp;&emsp;&emsp;&emsp;| +--function_index.html  
+&emsp;&emsp;&emsp;&emsp;| +--login_register.html  
+
   
          
 Finance System主要提供了4个功能  
