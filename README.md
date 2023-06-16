@@ -4,7 +4,7 @@
       &emsp;&emsp;&emsp;&emsp;username: root  
       &emsp;&emsp;&emsp;&emsp;password: 123456  
       &emsp;&emsp;&emsp;&emsp;需要执行：create database finance_news  
-  &emsp;&emsp;文件目录：  
+  &emsp;&emsp;文件目录：注意创建好./static/image文件夹
 &emsp;&emsp;&emsp;&emsp;root:[FinanceSystem]  
 &emsp;&emsp;&emsp;&emsp;+--app.py  
 &emsp;&emsp;&emsp;&emsp;+--cls_realtime_news.py  
